@@ -143,7 +143,6 @@ class TFNet(object):
 			self.writer = tf.summary.FileWriter(self.FLAGS.summary + 'train')
 		
 		conf = tf.ConfigProto(**cfg)
-		conf.gpu_options.per_process_gpu_memory_fraction = 0.7
 		self.sess = tf.Session(config = conf)
 		self.sess.run(tf.global_variables_initializer())
 

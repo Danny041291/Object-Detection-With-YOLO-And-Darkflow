@@ -46,7 +46,7 @@ def main():
 	options = {"model": "./cfg/yolo.cfg",
            "load": "./bin/yolo.weights",
            "threshold": 0.1, 
-		   "gpu": 1.0}
+		   "gpu": 0.7}
 	tfnet = TFNet(options)
 	if sys.argv[1] == 'image':
 		image_prediction(tfnet, sys.argv[2] if len(sys.argv) > 2 else './sample_img/sample_dog.jpg')
